@@ -29,14 +29,12 @@ fn math(inp: String) -> i32 {
     }
 }
 fn main() {
-    println!("math problem (+-/*):");
     let mut inp: String = "".to_owned();
     let mut args: Vec<_> = std::env::args().collect();
     args.remove(0);
     for i in args {
         inp.push_str(&i);
     }
-    println!("{}",inp);
     let a = math(inp);
     println!("{}",a);
 }
